@@ -7,7 +7,6 @@
 
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +14,9 @@
 <header>
 <nav class="navbar">
 <div class="logo-container">
-<h1 class="brand-name">DBOA <span class="highlight">Exploit</span></h1>
+<h1 class="brand-name">
+DBOA <span class="highlight">Exploit</span>
+</h1>
 </div>
 
 <ul class="nav-links">
@@ -25,21 +26,25 @@
 </nav>
 </header>
 
+
 <main>
 
 <section class="hero">
 <div class="hero-content">
 <h2>The Best Exploit</h2>
-<p class="hero-subtitle">Simple. Safe. Free.</p>
+<p class="hero-subtitle">
+Simple. Safe. Free.
+</p>
 
-<a href="arquivos/Dboa%20Executor%20V3.7.8.zip"
-download
-class="btn btn-primary">
+<a href="#"
+class="btn btn-primary"
+onclick="baixarArquivo(); return false;">
 Download Now
 </a>
 
 </div>
 </section>
+
 
 <section id="features" class="features">
 <h2 class="section-title">Features</h2>
@@ -49,7 +54,7 @@ Download Now
 <div class="feature-card">
 <div class="feature-icon">🔓</div>
 <h3>No Key</h3>
-<p>No activation key required. Use it immediately after download.</p>
+<p>No activation key required.</p>
 </div>
 
 <div class="feature-card">
@@ -61,38 +66,39 @@ Download Now
 <div class="feature-card">
 <div class="feature-icon">💰</div>
 <h3>100% Free</h3>
-<p>No hidden charges or subscriptions.</p>
+<p>Completely free.</p>
 </div>
 
 <div class="feature-card">
 <div class="feature-icon">⚡</div>
 <h3>Fast Updates</h3>
-<p>Frequent updates for best performance.</p>
+<p>Frequent updates.</p>
 </div>
 
 <div class="feature-card">
 <div class="feature-icon">🎯</div>
 <h3>Easy To Use</h3>
-<p>Simple and intuitive interface.</p>
+<p>Simple interface.</p>
 </div>
 
 <div class="feature-card">
 <div class="feature-icon">🔒</div>
 <h3>Undetected</h3>
-<p>Advanced anti-detection system.</p>
+<p>Advanced protection.</p>
 </div>
 
 <div class="feature-card">
 <div class="feature-icon">❔</div>
 <h3>Which API does he use?</h3>
 <p>
-Our executor uses the TomatoAPI. <br>
+Our executor uses the TomatoAPI.<br>
 Made by filip343filip &lt; Discord
 </p>
 </div>
 
 </div>
 </section>
+
 
 <section id="download" class="download">
 <h2 class="section-title">Download</h2>
@@ -108,17 +114,19 @@ Made by filip343filip &lt; Discord
 <li>Compatible: Windows 10/11</li>
 <li>Version: 3.7.8</li>
 </ul>
+
 </div>
 
-<a href="arquivos/Dboa%20Executor%20V3.7.8.zip"
-download
-class="btn btn-download">
+<a href="#"
+class="btn btn-download"
+onclick="baixarArquivo(); return false;">
 <span class="btn-icon">⬇</span>
 Free Download
 </a>
 
 </div>
 </section>
+
 
 <section class="developer">
 <p>
@@ -131,11 +139,35 @@ Olhadinhaso &lt; Roblox &gt;
 
 </main>
 
+
 <footer>
 <div class="footer-content">
-<p>&copy; 2026 DBOA Executor. All rights reserved.</p>
+<p>
+&copy; 2026 DBOA Executor. All rights reserved.
+</p>
 </div>
 </footer>
+
+
+<script>
+function baixarArquivo(){
+
+let link = document.createElement("a");
+
+link.href =
+"arquivos/Dboa%20Executor%20V3.7.8.zip";
+
+link.download =
+"Dboa Executor V3.7.8.zip";
+
+document.body.appendChild(link);
+
+link.click();
+
+document.body.removeChild(link);
+
+}
+</script>
 
 </body>
 </html>
