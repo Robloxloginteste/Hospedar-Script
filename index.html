@@ -8,17 +8,155 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAV */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:25px 70px;
+background:#111827;
+}
+
+.brand-name{
+margin:0;
+}
+
+.highlight{
+color:#3b82f6;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.btn{
+border:none;
+padding:15px 35px;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn-primary,
+.btn-download{
+background:#2563eb;
+color:white;
+}
+
+/* FEATURES */
+
+.features{
+padding:70px 30px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:38px;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:#111827;
+padding:30px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+}
+
+.feature-icon{
+font-size:42px;
+margin-bottom:15px;
+}
+
+/* ANIMAÇÃO AO DESCER */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* DOWNLOAD */
+.download{
+padding:70px 20px;
+}
+
+.download-card{
+max-width:850px;
+margin:auto;
+background:#111827;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.download-specs{
+list-style:none;
+padding:0;
+line-height:2;
+}
+
+.developer{
+text-align:center;
+padding:40px;
+}
+
+footer{
+background:#111827;
+text-align:center;
+padding:20px;
+}
+
+</style>
 </head>
 <body>
 
 <header>
 <nav class="navbar">
-<div class="logo-container">
 <h1 class="brand-name">
 DBOA <span class="highlight">Exploit</span>
 </h1>
-</div>
 
 <ul class="nav-links">
 <li><a href="#features">Features</a></li>
@@ -28,69 +166,66 @@ DBOA <span class="highlight">Exploit</span>
 </header>
 
 
-<main>
 
 <section class="hero">
-<div class="hero-content">
-
 <h2>The Best Exploit</h2>
-<p class="hero-subtitle">
-Simple. Safe. Free.
-</p>
+<p>Simple. Safe. Free.</p>
 
 <button class="btn btn-primary"
 onclick="baixarArquivo()">
 Download Now
 </button>
-
-</div>
 </section>
 
 
 
-<section id="features" class="features">
-<h2 class="section-title">Features</h2>
 
-<!-- CAIXAS NORMAIS -->
+<section id="features" class="features">
+
+<h2 class="section-title reveal">
+Features
+</h2>
+
+
 <div class="features-grid">
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">🔓</div>
 <h3>No Key</h3>
 <p>No activation key required.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">🛡️</div>
 <h3>No Virus</h3>
 <p>100% clean and safe.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">💰</div>
 <h3>100% Free</h3>
 <p>Completely free.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">⚡</div>
 <h3>Fast Updates</h3>
 <p>Frequent updates.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">🎯</div>
 <h3>Easy To Use</h3>
 <p>Simple and intuitive.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">🔒</div>
 <h3>Undetected</h3>
 <p>Advanced anti detection.</p>
 </div>
 
-<div class="feature-card">
+<div class="feature-card reveal">
 <div class="feature-icon">❔</div>
 <h3>Which API does he use?</h3>
 <p>
@@ -102,25 +237,18 @@ Made by filip343filip &lt; Discord
 </div>
 
 
-<!-- AVISO EMBAIXO DAS OUTRAS -->
-<div class="feature-card"
+
+<div class="feature-card reveal"
 onmouseover="this.style.transform='none'"
 style="
 max-width:900px;
-margin:30px auto 0 auto;
+margin:35px auto 0 auto;
 text-align:left;
 line-height:1.7;
 padding:35px;
-"
->
-
-<div class="feature-icon"
-style="
-transform:none;
-transition:none;
-animation:none;
-margin-left:0;
 ">
+
+<div style="font-size:42px;margin-bottom:15px;">
 ⚠
 </div>
 
@@ -128,7 +256,7 @@ margin-left:0;
 
 <p>
 If you use our executor, we need to tell you some
-<b>IMPORTANT</b> things so you can USE it!!
+IMPORTANT things so you can USE it!!
 </p>
 
 <p>
@@ -147,9 +275,7 @@ If YOU don't see the text called:
 
 <br><br>
 
-Check your F9 key and see if the text Tomato Loaded appears!
-
-<br><br>
+Check your F9 key and see if the text Tomato Loaded appears.
 
 If it appears, it means it was injected!
 </p>
@@ -160,56 +286,72 @@ That's all, thank you for your understanding!
 
 </div>
 
+
+
+<div class="feature-card reveal"
+style="
+max-width:700px;
+margin:25px auto 0 auto;
+padding:30px;
+">
+
+<div style="font-size:42px;margin-bottom:15px;">
+🔄
+</div>
+
+<h3>Will there be updated APIs?</h3>
+
+<p>
+Okay, in a few months we'll change the API
+and update it or switch to another one!
+</p>
+
+</div>
+
 </section>
 
+
+
+
 <section id="download" class="download">
-<h2 class="section-title">
+
+<h2 class="section-title reveal">
 Download
 </h2>
 
-<div class="download-card">
+<div class="download-card reveal">
 
-<div class="download-info">
 <h3>DBOA Executor v3.7.8</h3>
 
 <p>Last updated: 04/22/2026</p>
 
 <ul class="download-specs">
-<li>Size: 23.4 MB</li>
+<li>Size: 15 MB</li>
 <li>Compatible: Windows 10/11</li>
 <li>Version: 3.7.8</li>
 </ul>
-</div>
 
 <button class="btn btn-download"
 onclick="baixarArquivo()">
-<span class="btn-icon">⬇</span>
-Free Download
+⬇ Free Download
 </button>
 
 </div>
+
 </section>
 
-<section class="developer">
-<p>
-Developed by
-<span class="dev-name">
-Olhadinhaso &lt; Roblox &gt;
-</span>
-</p>
-</section>
 
-</main>
+
+<section class="developer reveal">
+Developed by Olhadinhaso &lt; Roblox &gt;
+</section>
 
 
 
 <footer>
-<div class="footer-content">
-<p>
 © 2026 DBOA Executor. All rights reserved.
-</p>
-</div>
 </footer>
+
 
 
 
@@ -225,12 +367,32 @@ link.download=
 "Dboa Executor V3.7.8.zip";
 
 document.body.appendChild(link);
-
 link.click();
-
 document.body.removeChild(link);
 
 }
+
+
+/* animação ao rolar */
+function reveal(){
+let reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+let revealTop=reveals[i].getBoundingClientRect().top;
+let revealPoint=100;
+
+if(revealTop < windowHeight-revealPoint){
+reveals[i].classList.add("active");
+}
+
+}
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
 </script>
 
 </body>
